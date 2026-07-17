@@ -24,3 +24,8 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 # Shorcuts related to virtualenv activation
 alias va='source .venv/bin/activate'
+alias sqme='squeue -u $USER'
+
+# Shortcuts to see the GPUs status
+alias nvitop="uvx nvitop"
+alias gsta="git status"
