@@ -40,8 +40,23 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 
 ## Install
 
-From the repo root:
+On a Linux x86_64 dev machine, clone this repo and run:
 
 ```bash
 ./install.sh
+exec bash
 ```
+
+This links the Bash configuration and installs pinned, checksum-verified
+versions of `fzf`, `bat`, and `fd` into `~/.local/bin`; it never needs `sudo`.
+
+To update another dev machine:
+
+```bash
+git pull --ff-only
+./install.sh
+exec bash
+```
+
+To update a tool version for every machine, change its version and checksum
+near the top of `install.sh`, then commit that change.

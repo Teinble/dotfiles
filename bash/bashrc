@@ -21,3 +21,4 @@ source_if_exists "$HOME/.bashrc.d/conda.bash"
 source_if_exists "$HOME/.bashrc.d/local.bash"
 
 unset -f source_if_exists
+export PATH="$HOME/.local/bin:$PATH"
