@@ -17,7 +17,7 @@ source_if_exists "$HOME/.bashrc.d/prompt.bash"
 source_if_exists "$HOME/.bashrc.d/aliases.bash"
 source_if_exists "$HOME/.bashrc.d/completion.bash"
 source_if_exists "$HOME/.bashrc.d/paths.bash"
-source_if_exists "$HOME/.bashrc.d/conda.bash"
+# Keep Conda initialization and machine-specific paths in local.bash.
 source_if_exists "$HOME/.bashrc.d/local.bash"
 
 unset -f source_if_exists

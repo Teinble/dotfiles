@@ -1,6 +1,22 @@
 # dotfiles
 
-Personal shell configuration.
+Personal Linux Bash and tmux configuration, plus my macOS application manifest.
+
+## macOS applications
+
+`Brewfile` records my CLI tools, desktop apps, and App Store apps. It does not sync settings or sign-ins.
+
+```bash
+brew bundle --file=Brewfile
+```
+
+Review the list before installing. Existing manually installed apps can conflict with Cask installation; do not force-overwrite them.
+
+Update this list by editing `Brewfile`, or using `brew bundle add --cask APP --file=Brewfile` and `brew bundle remove --cask APP --file=Brewfile`. Commit and push the resulting change. Avoid overwriting the curated list with `brew bundle dump --force`.
+
+## Existing checkouts
+
+History was sanitized before publication. Back up your untracked and machine-local files, then use a fresh clone rather than merging the old history. Keep the private `local.bash` outside Git; start from `local.example.bash` on new machines.
 
 ## Layout
 
@@ -9,7 +25,6 @@ bash/bashrc
 bash/bashrc.d/
   aliases.bash
   completion.bash
-  conda.bash
   env.bash
   history.bash
   local.example.bash
